@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Link from 'next/link'
-import { Row, Col, Select } from "antd";
+import { Row, Col } from "antd";
 import { Fade } from "react-reveal";
 
 import Container from "../common/Container";
@@ -16,58 +16,58 @@ const Footer = () => {
           <Container>
             <Row type="flex" justify="space-between">
               <Col lg={10} md={10} sm={12} xs={24}>
-                <S.Language>{"Contact"}</S.Language>
-                <S.Large to="/">{"Tell us everything"}</S.Large>
-                <S.Para>
-                  {
-                    `Do you have any question regarding the project? Fell free to reach out.`
-                  }
-                </S.Para>
-                <a href="mailto:l.qqbadze@gmail.com">
-                  <S.Chat>{`Let's Chat`}</S.Chat>
-                </a>
+                <S.Language>Forum</S.Language>
+                <Link href={"/forum"} passHref>
+                  <a><S.Chat>Ask Your Peers</S.Chat></a>
+                </Link>
+                <S.Language>
+                  Update project status:
+                </S.Language>
+                <Link href={"/project-status"} passHref>
+                  <a><S.Chat>Project Status</S.Chat></a>
+                </Link>
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
-                <S.Title>{"Policy"}</S.Title>
-                <S.Large to="/" left="true">
-                  {"Application Security"}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {"Software Principles"}
-                </S.Large>
+                <S.Title>Resources</S.Title>
+                <Link href={'https://freecodecamp.org'} passHref>
+                  <S.Large left="true">
+                    Free Code Camp
+                  </S.Large>
+                </Link>
+                <Link href={'https://glitch.com'} passHref>
+                  <S.Large left="true">
+                    Glitch
+                  </S.Large>
+                </Link>
+                <Link href={'https://code.visualstudio.com'} passHref>
+                  <S.Large left="true">
+                    VS Code
+                  </S.Large>
+                </Link>
+                <Link href={'https://git-scm.com'} passHref>
+                  <S.Large left="true">
+                    Git SCM
+                  </S.Large>
+                </Link>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Empty />
-                <S.Large left="true" to="/">
-                  {"Support Center"}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {"Customer Support"}
-                </S.Large>
-              </Col>
-            </Row>
-            <Row type="flex" justify="space-between">
-              <Col lg={10} md={10} sm={12} xs={24}>
-                <S.Empty />
-                <S.Language>{"ADDRESS"}</S.Language>
-                <S.Para>Rancho Santa Margarita</S.Para>
-                <S.Para>2131 Elk Street</S.Para>
-                <S.Para>California</S.Para>
-              </Col>
-              <Col lg={8} md={8} sm={12} xs={24}>
-                <S.Title>{"Company"}</S.Title>
-                <S.Large left="true" to="/">
-                  {"About"}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {"Blog"}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {"Press"}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {"Careers & Culture"}
-                </S.Large>
+                <Link href={'https://github.com/JamieVaughn/curriculum'} passHref>
+                  <S.Large left="true">
+                    <S.FooterContainer>
+                      <SvgIcon src="github.svg" />
+                    </S.FooterContainer>
+                    <span> Github</span>
+                  </S.Large>
+                </Link>
+                <Link href={'https://frontendacademy.slack.com'} passHref>
+                  <S.Large left="true">
+                    <S.FooterContainer>
+                      <SvgIcon src="slack.svg" />
+                    </S.FooterContainer>
+                    Slack
+                  </S.Large>
+                </Link>
               </Col>
             </Row>
           </Container>
@@ -78,7 +78,7 @@ const Footer = () => {
               type="flex"
               justify="space-between"
               align="middle"
-              style={{ paddingTop: "3rem" }}
+              style={{ padding: "2rem 0" }}
             >
               <Link href={'/'}>
                 <a>
@@ -88,49 +88,24 @@ const Footer = () => {
                 </a>
               </Link>
               <S.FooterContainer>
+                All Rights Reserved © {new Date().getFullYear()}
+              </S.FooterContainer>
+              <S.FooterContainer>
                 <a
-                  href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                  href="https://github.com/JamieVaughn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <SvgIcon src="github.svg" />
                 </a>
                 <a
-                  href="https://twitter.com/Adrinlolx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon src="twitter.svg" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/lasha-kakabadze//"
+                  href="https://www.linkedin.com/in/wjamievaughn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <SvgIcon src="linkedin.svg" />
                 </a>
-                <a
-                  href="https://github.com/Adrinlol/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon src="instagram.svg" />
-                </a>
-                <a
-                  href="https://medium.com/@lashakakabadze/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon src="medium.svg" />
-                </a>
               </S.FooterContainer>
-            </Row>
-            <Row type="flex" justify="space-between">
-              <Col lg={12} md={12} sm={12} xs={24}>
-                <S.CSite>
-                  All Rights Reserved - Landy © {new Date().getFullYear()}
-                </S.CSite>
-              </Col>
             </Row>
           </Container>
         </S.Extra>

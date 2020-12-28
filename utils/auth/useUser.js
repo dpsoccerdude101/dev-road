@@ -17,12 +17,13 @@ const useUser = () => {
   const router = useRouter()
 
   const logout = async () => {
+    console.log('logout')
     return firebase
       .auth()
       .signOut()
       .then(() => {
         // Sign-out successful.
-        router.push('/auth')
+        router.push('/')
       })
       .catch((e) => {
         console.error(e)

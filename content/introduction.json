@@ -1,12 +1,14 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed template using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Learn Modern Front End Development",
+  "text": "This is a professional certification program offered through Monroe Community College. Its mission is to prepare you for being hired as a front end web developer, where you will create the next generation of web interfaces.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Sign Up",
+      "href": "/auth"
     },
     {
-      "title": "Learn More",
+      "title": "See Syllabus",
+      "href": "/syllabus",
       "color": "#fff"
     }
   ]

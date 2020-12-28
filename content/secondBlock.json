@@ -1,15 +1,15 @@
 {
-  "title": "Light, Fast & Responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Become a UI Developer",
+  "text": "With HTML and CSS you will be able to create beautiful web interfaces that every company needs for their online presence.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a plethora of easy-to-use components that are useful for building elegant UI.",
+      "title": "HTML",
+      "content": "HTML is the structure behind every web page!",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components, instead of using a multitude of conditional class names.",
+      "title": "CSS",
+      "content": "Learn how to make those web pages look amazing with CSS!",
       "icon": "notes.svg"
     }
   ]

@@ -22,6 +22,13 @@ const Styles = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    .nav {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+    }
+    .nav button {
+        margin-top: 0;
+    }
     a:hover {
         color: #000;
     }
@@ -60,6 +67,16 @@ const Styles = createGlobalStyle`
             color: rgb(255, 130, 92);
         }
     }
+    button a {
+        color: #fff;
+    }
+    button a.syllabus {
+        color: #2E186A;
+        transition: font-size 250ms;
+        :hover {
+            font-size: 1.15rem;
+        }
+    }
     
     *:focus {
         outline: none;
@@ -94,7 +111,36 @@ const Styles = createGlobalStyle`
         border-color: #d9d9d9 !important;
         box-shadow: none !important;
     }
-
+    .auth {
+        color: white;
+        margin: 0;
+    }
+    button .auth:hover, .button-link:hover {
+        color: #2E186A;
+    }
+    .button-link {
+        background: rgb(255, 130, 92);
+        padding: 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        height: 60px;
+        outline: none;
+        cursor: pointer;
+        margin-top: 0.625rem;
+        max-width: 180px;
+    }
+    .figures {
+        display: flex;
+        justify-content: center;
+    }
+    .figure {
+        max-height: 100px;
+        width: auto;
+    }
 `;
 
 export default Styles;

@@ -1,6 +1,7 @@
 {
-    "title": "Introduce Your Product Quickly & Effectively",
-    "text": "Landy comes with multi-lingual support, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in developing web applications using React.js.",
-    "button": "Get Started"
+    "title": "Learn HTML, CSS, Javascript & React",
+    "text": "Prepare yourself for one of the fastest growing industries out there! You'll be equipped with all the tools and best practices you'll need to succeed.",
+    "srcOne": "html_js_css_logo.png",
+    "srcTwo": "react_icon.png"
   }
   

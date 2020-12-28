@@ -8,15 +8,12 @@ export const Header = styled.header`
 // export const LogoContainer = styled(Link)`
 export const LogoContainer = styled.a`
   display: flex;
-  padding-top: 1rem;
 `;
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
   max-width: 1280px;
-  padding-right: 25px;
-  padding-left: 25px;
   margin-right: auto;
   margin-left: auto;
 `;
@@ -57,6 +54,7 @@ export const Burger = styled.div`
 `;
 
 export const NotHidden = styled.div`
+  display: flex;
   @media only screen and (max-width: 768px) {
     display: none;
   }
@@ -74,10 +72,11 @@ export const CustomNavLinkSmall = styled(NavLink)`
   font-size: 1rem;
   color: #000000;
   transition: color 0.2s ease-in;
-  margin: 0.25rem 2rem;
+  margin: 0.25rem 0.75rem;
+  user-select: none;
 
   @media only screen and (max-width: 768px) {
-    margin: 1.25rem 2rem;
+    margin: 1.25rem 0.75rem;
   }
 `;
 

@@ -23,7 +23,7 @@ const RightBlock = ({ last, first, title, content, button, icon }) => {
                   button.map((item, id) => {
                     return (
                       <Button key={id} color={item.color} width="true">
-                        {item.title}
+                        <a href={item.href} className={item.href.slice(1)}>{item.title}</a>
                       </Button>
                     );
                   })}

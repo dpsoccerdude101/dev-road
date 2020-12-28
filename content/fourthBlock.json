@@ -1,4 +1,4 @@
 {
-  "title": "That's about it!",
-  "text": "If you are familiar with React, or SPA frameworks in general, there shouldn't be any confusing part about this template, if not, you can always reach out to me and I'll try me best to answer your question."
+  "title": "Learn Application Architecture with React",
+  "text": "As these web applications scale up in size, the best developers know that organization and architecture becomes paramount. With frameworks like React.js, developer teams can break up their application into small components to easily manage complexity. You'll learn the industry best practices that guide writing and organizing components in React."
 }

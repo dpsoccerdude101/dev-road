@@ -95,8 +95,8 @@ export const Large = styled.a`
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
   line-height: 24px;
-  display: block;
-  margin-bottom: 0.625rem;
+  display: flex;
+  margin: 4px 0;
 
   &:hover {
     color: rgb(255, 130, 92);
@@ -109,11 +109,10 @@ export const Large = styled.a`
 
 export const Chat = styled.p`
   color: rgba(2, 7, 62, 0.8);
-  max-width: 85px;
+  display: inline-block;
   border-bottom: 1px solid rgba(2, 7, 62, 0.8);
   cursor: pointer;
-  margin-top: 1rem;
-
+  white-space: nowrap;
   &:hover {
     border-bottom: 1px solid rgb(255, 130, 92);
     color: rgb(255, 130, 92);
@@ -127,7 +126,6 @@ export const Empty = styled.div`
 
 export const FooterContainer = styled.div`
   max-width: 510px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
 

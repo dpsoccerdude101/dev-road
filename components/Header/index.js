@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import Link from 'next/link'
 import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
@@ -8,10 +8,18 @@ import Button from "../common/Button";
 
 import * as S from "./styles";
 
-const Header = () => {
+const Header = ({user, logout}) => {
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
+  const [session, setSession] = useState(null)
+
+  useEffect(() => {
+    if(user) setSession({user, logout})
+    return () => {
+      
+    }
+  }, [user])
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -21,38 +29,60 @@ const Header = () => {
     setVisibility(!visible);
   };
 
+  const handleClick = () => {
+    console.log('header', session, user, logout)
+    logout ? logout() : session?.logout()
+  }
+
   const MenuItem = () => {
     return (
       <Fragment>
         <S.CustomNavLinkSmall>
-          <Link href={'/'}><a>About</a></Link>
+          <Link href={'/syllabus'}><a>Syllabus</a></Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link href={'/'}><a>Mission</a></Link>
+          <Link href={'/timeline'}><a>Timeline</a></Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link href={'/'}><a>Product</a></Link>
+          <Link href={'/slides'}><a>Slides</a></Link>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall style={{ width: "180px" }}>
-          <Link href={'/'}>
-            <Button>Contact</Button>
-          </Link>
+        {user || session?.user ? 
+        <S.CustomNavLinkSmall>
+          <Link href={'/profile'}><a>My Profile</a></Link>
+        </S.CustomNavLinkSmall>
+        : null }
+        <S.CustomNavLinkSmall style={{ width: "180px" }} >
+          
+            {!(user || session?.user) ? (
+              <Link passHref href={'/auth'} >
+                <a className="button-link auth">Sign in</a>
+              </Link>
+            ) : (
+              <Button style={{maxWidth: '125px'}} onClick={handleClick}>
+                <p className="auth" >
+                  Log out 
+                </p>
+              </Button>
+            )}
+          
         </S.CustomNavLinkSmall>
       </Fragment>
     );
   };
-
+  
   return (
-    <S.Header>
+    <S.Header onClick={() => console.log('inpsect', user, session?.user)}>
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <Col>
-            <S.LogoContainer to="/">
-              <SvgIcon src="logo.svg" />
-            </S.LogoContainer>
+            <Link href={'/'}>
+              <S.LogoContainer >
+                <SvgIcon src="logo.svg" />
+              </S.LogoContainer>
+            </Link>
           </Col>
           <S.NotHidden>
-            <Col style={{ display: "flex", alignItems: "baseline" }}>
+            <Col style={{ display: "flex", alignItems: "center" }}>
               <MenuItem />
             </Col>
           </S.NotHidden>
