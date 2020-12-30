@@ -4,7 +4,6 @@
 
 import Layout from "../components/Layout";
 
-// import ContactFrom from "../components/ContactForm";
 import ContentBlock from "../components/ContentBlock";
 import MiddleBlock from "../components/MiddleBlock";
 import Container from "../components/common/Container";
@@ -15,7 +14,6 @@ import FirstBlock from "../content/firstBlock.json";
 import SecondBlock from "../content/secondBlock.json";
 import ThirdBlock from "../content/thirdBlock.json";
 import FourthBlock from "../content/fourthBlock.json";
-// import ContactBlock from "../content/contactBlock.json";
 
 // const fetcher = (url, token) =>
 //   fetch(url, {
@@ -41,6 +39,7 @@ const Index = () => {
       <Layout>
         <Container>
           <ScrollToTop />
+          <h1 style={{textAlign: 'center'}}>MCC Course Portal</h1>
           <ContentBlock
             type="right"
             first="true"
@@ -74,7 +73,6 @@ const Index = () => {
             content={FourthBlock.text}
             icon="waving.svg"
           />
-          {/* <ContactFrom title={ContactBlock.title} content={ContactBlock.text} /> */}
         </Container>
       </Layout>
     </div>

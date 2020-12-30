@@ -11,13 +11,13 @@ import validate from "./validationRules";
 
 import * as S from "./styles";
 
-const Contact = ({id, title, content}) => {
+const Info = ({id, title, content}) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   return (
     <S.ContactContainer id={id}>
       <S.Contact>
-        <Row type="flex" justify="space-between" align="middle">
+        <Row type="flex" justify="space-between" align="start">
           <Col lg={12} md={11} sm={24} xs={24}>
             <Block
               padding={true}
@@ -30,14 +30,14 @@ const Contact = ({id, title, content}) => {
               <Col lg={24} md={24} sm={24} xs={24}>
                 <Input
                   type="text"
-                  name="name"
-                  placeholder="Name"
+                  name="firstName"
+                  placeholder="First Name"
                   value={values.name || ""}
                   onChange={handleChange}
                 />
                 {errors.name ? (
                   <Zoom cascade>
-                    <S.Span>Name is required</S.Span>
+                    <S.Span>First Name is required</S.Span>
                   </Zoom>
                 ) : (
                   <S.Span />
@@ -46,14 +46,30 @@ const Contact = ({id, title, content}) => {
               <Col lg={24} md={24} sm={24} xs={24}>
                 <Input
                   type="text"
-                  name="email"
-                  placeholder="Email"
+                  name="lastName"
+                  placeholder="Last Name"
                   value={values.email || ""}
                   onChange={handleChange}
                 />
                 {errors.email ? (
                   <Zoom cascade>
-                    <S.Span>Email is required</S.Span>
+                    <S.Span>Last Name is required</S.Span>
+                  </Zoom>
+                ) : (
+                  <S.Span />
+                )}{" "}
+              </Col>
+              <Col lg={24} md={24} sm={24} xs={24}>
+                <Input
+                  type="text"
+                  name="linkedin"
+                  placeholder="LinkedIn Profile URL"
+                  value={values.email || ""}
+                  onChange={handleChange}
+                />
+                {errors.email ? (
+                  <Zoom cascade>
+                    <S.Span>LinkedIn Profile URL is required</S.Span>
                   </Zoom>
                 ) : (
                   <S.Span />
@@ -61,14 +77,14 @@ const Contact = ({id, title, content}) => {
               </Col>
               <Col lg={24} md={24} sm={24} xs={24}>
                 <TextArea
-                  placeholder="Your Message"
+                  placeholder="Your Hobbies & Interests"
                   value={values.message || ""}
                   name="message"
                   onChange={handleChange}
                 />
                 {errors.message ? (
                   <Zoom cascade>
-                    <S.Span>Message is required</S.Span>
+                    <S.Span>Hobbies & Interests are required</S.Span>
                   </Zoom>
                 ) : (
                   <S.Span />
@@ -87,4 +103,4 @@ const Contact = ({id, title, content}) => {
   );
 };
 
-export default Contact;
+export default Info;

@@ -21,10 +21,10 @@ const Header = ({user, logout}) => {
     setVisibility(!visible);
   };
 
-  const handleClick = () => {
-    console.log('logging out ' +  user.email)
-    logout()
-  }
+  // const handleClick = () => {
+  //   console.log('logging out ' +  user.email)
+  //   logout()
+  // }
 
   const ProtectedRoutes = ({user, logout}) => {
     if(!user) {
@@ -53,7 +53,7 @@ const Header = ({user, logout}) => {
           </Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall style={{ width: "180px" }} >
-          <Button style={{maxWidth: '125px'}} onClick={handleClick}>
+          <Button style={{maxWidth: '125px'}} onClick={logout}>
             <p className="auth" >
               Log out 
             </p>
@@ -69,7 +69,7 @@ const Header = ({user, logout}) => {
         <S.CustomNavLinkSmall>
           <Link href={'/syllabus'}><a>Syllabus</a></Link>
         </S.CustomNavLinkSmall>
-        <ProtectedRoutes user={user} />
+        <ProtectedRoutes user={user} logout={logout}/>
       </Fragment>
     );
   };

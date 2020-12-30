@@ -1,9 +1,7 @@
 import {useState} from 'react'
 import { Table, Tag, Space } from 'antd';
-import Link from 'next/link'
 import Layout from '../components/Layout';
 import styled from "styled-components";
-import SvgIcon from "../components/common/SvgIcon";
 import ContentBlock from "../components/ContentBlock";
 import MiddleBlock from "../components/MiddleBlock";
 
@@ -84,10 +82,11 @@ const Title = styled.h1`
   text-align: center;
 `
 
-const Syllabus = ({user, logout}) => {
+const Syllabus = () => {
 const [sieve, setSieve] = useState(0)
 
   return (
+    <>
       <Layout>
         <MiddleBlock
             title={"MCC Front End Professional Certification"}
@@ -120,37 +119,37 @@ const [sieve, setSieve] = useState(0)
             section={[
               {
                 "title": "Tool Tips!",
-                "content": "Overview of web development tools for every developer",
+                "content": "Overview of the most useful web development tools for every developer",
                 "icon": "checked_circle.svg"
               },
               {
                 "title": "Main Lecture Topic",
-                "content": "Review of Material via Slides and Documentation",
+                "content": "Review of concepts and web standards via slides and documentation",
                 "icon": "checked_circle.svg"
               },
               {
                 "title": "Survey of Computer Science",
-                "content": "A look into practical computer science topics and theory",
+                "content": "Practical computer science topics and concepts",
                 "icon": "checked_circle.svg"
               },
               {
                 "title": "Code-Along",
-                "content": "Hands on, guided coding exercises",
+                "content": "Hands-on, guided coding exercises",
                 "icon": "checked_circle.svg"
               },
               {
                 "title": "Assessments & Challenges",
-                "content": "Quizes and coding Challenges to test comprehension",
+                "content": "Quizes and challenges to test comprehension",
                 "icon": "checked_circle.svg"
               },
               {
-                "title": "Project Sessions",
-                "content": "Open time for working on assigned projects with guidance",
+                "title": "Project Workshops",
+                "content": "Advisory sessions for working on assigned projects",
                 "icon": "checked_circle.svg"
               },
               {
                 "title": "Assigned Homework",
-                "content": "Extracurricular exercises from Freecodecamp.org",
+                "content": "Homework exercises from Freecodecamp.org",
                 "icon": "checked_circle.svg"
               }
             ]}
@@ -173,6 +172,7 @@ const [sieve, setSieve] = useState(0)
               />
         </Padding>
       </Layout>
+    </>
   )
 }
 

@@ -1,9 +1,10 @@
 import Layout from '../components/Layout';
 import styled from "styled-components";
 import {Button} from 'antd'
+import Info from "../components/InfoForm";
 import { useUser } from '../utils/auth/useUser'
 
-const Padding = styled.div`
+const Grid = styled.div`
   max-width: 70vw;
   min-height: 30vh;
   padding: 1rem;
@@ -23,6 +24,9 @@ const Padding = styled.div`
 const Title = styled.h1`
   text-align: center;
 `
+const Padding = styled.div`
+  padding: 1rem;
+`
 
 const Profile = (props) => {
     const {user, logout} = useUser()
@@ -36,12 +40,12 @@ const Profile = (props) => {
             <Layout>
             <Title>My Profile</Title>
             <Button style={{margin: '0 auto', display: 'block'}} onClick={() => logout()}>Not you? Click here</Button>
-            <Padding>
+            <Grid>
                 <img 
                 className='pic'
                 style={{borderRadius: '100%', background: 'steelblue', padding: '1rem'}}
                 height='250px' 
-                src={user.providerData[0].photoUrl || `https://avatars.dicebear.com/api/bottts/${nickname}.svg`} 
+                src={user.providerData[0].photoUrl || `https://avatars.dicebear.com/api/bottts/${nickname}svg`} 
                   />
                 <div className='email' data-id={user.id}>
                   <strong style={{fontSize: '1.25rem'}}>{user.email}</strong> <span>{user.emailVerified ? '(verfied)' : '(unverified)'}</span>
@@ -52,6 +56,11 @@ const Profile = (props) => {
                 <div className='join'>Joined: {user.metadata.creationTime}</div>
                 <div className='login'>Logged in at: {user.metadata.lastSignInTime}</div>
                 <div className='phone'>Phone: {user.providerData[0].phoneNumber || 'not provided'}</div>
+            </Grid>
+            <Padding>
+              <Info 
+                title={'Provide Some Additional Info'} 
+                content={'Feel free to add you name and LinkedIn Account URL to your profile! Also Tell us about some of you hobbies and interests, so class project topics can be personalized for you!'} />
             </Padding>
             </Layout>
         </div>

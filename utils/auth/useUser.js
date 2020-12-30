@@ -48,7 +48,8 @@ const useUser = () => {
 
     const userFromCookie = getUserFromCookie()
     if (!userFromCookie) {
-      router.push('/')
+      // console.log('router', router)
+      router.push(router.pathname === '/syllabus' ? '/syllabus' : '/')
       return
     }
     setUser(userFromCookie)

@@ -69,7 +69,7 @@ const Footer = () => {
                     <S.FooterContainer>
                       <SvgIcon src="github.svg" />
                     </S.FooterContainer>
-                    <span> Github</span>
+                    Github
                   </S.Large>
                 </Link>
               </Col>

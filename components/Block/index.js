@@ -8,8 +8,8 @@ const Block = ({ title, content }) => {
     <S.Container>
       <Fade left>
         <S.Title>{title}</S.Title>
-        <S.TextWrapper>
-          <S.Content>{content}</S.Content>
+        <S.TextWrapper style={{marginRight: 0}}>
+          <S.Content >{content}</S.Content>
         </S.TextWrapper>
       </Fade>
     </S.Container>
