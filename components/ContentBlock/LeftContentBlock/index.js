@@ -5,17 +5,17 @@ import { Slide } from "react-reveal";
 
 import * as S from "./styles";
 
-const LeftContentBlock = ({ icon, title, content, section }) => {
-
+const LeftContentBlock = ({ icon, title, content, section, dense}) => {
+  let media = icon ? {lg: 11, md: 11, sm: 12, xs: 24} : {xs: 24}
   return (
     <S.LeftContentBlock>
       <Row type="flex" justify="space-between" align="middle">
-        <Col lg={11} md={11} sm={12} xs={24}>
+        {icon && <Col {...media}>
           <Slide left>
             <SvgIcon src={icon} className="about-block-image" />
           </Slide>
-        </Col>
-        <Col lg={11} md={11} sm={12} xs={24}>
+        </Col>}
+        <Col {...media}>
           <Slide right>
             <S.ContentWrapper>
               <S.Title>{title}</S.Title>
@@ -27,8 +27,8 @@ const LeftContentBlock = ({ icon, title, content, section }) => {
                     section.map((item, id) => {
                       return (
                         <Col key={id} lg={12} md={12} sm={12} xs={12}>
-                          <SvgIcon src={item.icon} />
-                          <S.MinTitle>{item.title}</S.MinTitle>
+                          {dense ? null : <SvgIcon src={item.icon} />}
+                          <S.MinTitle style={{display: 'flex', alignItems: 'center'}}>{dense && <SvgIcon src={item.icon} style={{marginRight: '4px'}}/>} {item.title}</S.MinTitle>
                           <S.MinPara>{item.content}</S.MinPara>
                         </Col>
                       );

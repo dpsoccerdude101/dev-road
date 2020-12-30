@@ -115,6 +115,13 @@ const Styles = createGlobalStyle`
         border-color: #d9d9d9 !important;
         box-shadow: none !important;
     }
+    .ant-table-footer {
+        display: flex;
+        justify-content: flex-end;
+        span {
+            margin-right: 8vw;
+        }
+    }
     .auth {
         color: white;
         margin: 0;
@@ -144,6 +151,14 @@ const Styles = createGlobalStyle`
     .figure {
         max-height: 100px;
         width: auto;
+    }
+    .syllabus-content {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 1rem;
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+        }
     }
 `;
 
