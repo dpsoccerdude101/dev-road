@@ -49,12 +49,13 @@ const rows = [
   {level: ['i'], topic: 'Mobile Responsive Design', hours: 6},
   {level: ['i'], topic: 'Accessibility & UI/UX', hours: 3},
   {level: ['i'], topic: 'Individual Portfolio Project', hours: 3},
-  {level: ['i'], topic: 'Git & GitHub & VSCode', hours: 6},
+  {level: ['i'], topic: 'GitHub & VSCode', hours: 3},
   {level: ['i'], topic: 'Web Browsers and the DOM', hours: 9},
   {level: ['ii'], topic: 'JavaScript & ES6 Essentials', hours: 12},
   {level: ['ii'], topic: 'Javascript Data Structures', hours: 3},
   {level: ['ii'], topic: 'JSON & AJAX & HTTP/S', hours: 6},
   {level: ['ii'], topic: 'REST & GraphQL APIS', hours: 6},
+  {level: ['ii'], topic: 'Git & Version Control', hours: 3},
   {level: ['ii'], topic: 'Functional Programming & CS Concepts', hours: 6},
   {level: ['ii'], topic: 'SASS', hours: 3},
   {level: ['ii'], topic: 'Javascript Design Patterns', hours: 9},
@@ -83,7 +84,7 @@ const Title = styled.h1`
   text-align: center;
 `
 
-const Syllabus = (props) => {
+const Syllabus = ({user, logout}) => {
 const [sieve, setSieve] = useState(0)
 
   return (
@@ -172,7 +173,6 @@ const [sieve, setSieve] = useState(0)
               />
         </Padding>
       </Layout>
-    
   )
 }
 

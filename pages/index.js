@@ -1,11 +1,10 @@
-import useSWR from 'swr'
-import Link from 'next/link'
-import { useEffect } from 'react'
-import { useUser } from '../utils/auth/useUser'
+// import useSWR from 'swr'
+// import Link from 'next/link'
+// import { useEffect } from 'react'
 
 import Layout from "../components/Layout";
 
-import ContactFrom from "../components/ContactForm";
+// import ContactFrom from "../components/ContactForm";
 import ContentBlock from "../components/ContentBlock";
 import MiddleBlock from "../components/MiddleBlock";
 import Container from "../components/common/Container";
@@ -16,14 +15,14 @@ import FirstBlock from "../content/firstBlock.json";
 import SecondBlock from "../content/secondBlock.json";
 import ThirdBlock from "../content/thirdBlock.json";
 import FourthBlock from "../content/fourthBlock.json";
-import ContactBlock from "../content/contactBlock.json";
+// import ContactBlock from "../content/contactBlock.json";
 
-const fetcher = (url, token) =>
-  fetch(url, {
-    method: 'GET',
-    headers: new Headers({ 'Content-Type': 'application/json', token }),
-    credentials: 'same-origin',
-  }).then((res) => res.json())
+// const fetcher = (url, token) =>
+//   fetch(url, {
+//     method: 'GET',
+//     headers: new Headers({ 'Content-Type': 'application/json', token }),
+//     credentials: 'same-origin',
+//   }).then((res) => res.json())
 
   // {error && <div>Failed to fetch food!</div>}
   // {data && !error ? (
@@ -33,16 +32,13 @@ const fetcher = (url, token) =>
   // )}
 
 const Index = () => {
-  const {user, logout} = useUser()
   // const { data, error } = useSWR(
   //   user ? ['/api/getFood', user.token] : null,
   //   fetcher
   // )
-  
-
   return (
     <div>
-      <Layout user={user} logout={logout}>
+      <Layout>
         <Container>
           <ScrollToTop />
           <ContentBlock

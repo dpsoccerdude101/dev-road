@@ -17,7 +17,6 @@ const useUser = () => {
   const router = useRouter()
 
   const logout = async () => {
-    console.log('logout')
     return firebase
       .auth()
       .signOut()

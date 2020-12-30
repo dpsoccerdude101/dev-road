@@ -160,6 +160,12 @@ const Styles = createGlobalStyle`
           flex-direction: column;
         }
     }
+    .pic {grid-area: pic}
+    .name { grid-area: name }
+    .email { grid-area: email }
+    .join { grid-area: join}
+    .login { grid-area: login }
+    .phone{ grid-area: phone }
 `;
 
 export default Styles;

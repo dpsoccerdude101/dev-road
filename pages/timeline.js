@@ -13,14 +13,14 @@ const Title = styled.h1`
 `
 
 const Timeline = (props) => {
-
+    console.log(props)
     return (
         <div>
             <Layout>
-            <Title>Timeline</Title>
-            <Padding>
-                Timeline
-            </Padding>
+              <Title>Timeline</Title>
+              <Padding>
+                  Timeline
+              </Padding>
             </Layout>
         </div>
     )

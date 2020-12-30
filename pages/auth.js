@@ -4,6 +4,7 @@ const Auth = () => {
   return (
     <div>
       <h2 style={{textAlign: 'center'}}>Signing in...</h2>
+      <br />
       <div>
         <FirebaseAuth />
       </div>

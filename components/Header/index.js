@@ -22,10 +22,11 @@ const Header = ({user, logout}) => {
   };
 
   const handleClick = () => {
+    console.log('logging out ' +  user.email)
     logout()
   }
 
-  const ProtectedRoutes = ({user}) => {
+  const ProtectedRoutes = ({user, logout}) => {
     if(!user) {
       return (
         <S.CustomNavLinkSmall style={{ width: "180px" }} >
@@ -52,7 +53,7 @@ const Header = ({user, logout}) => {
           </Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall style={{ width: "180px" }} >
-          <Button style={{maxWidth: '125px'}} onClick={logout}>
+          <Button style={{maxWidth: '125px'}} onClick={handleClick}>
             <p className="auth" >
               Log out 
             </p>
@@ -74,7 +75,7 @@ const Header = ({user, logout}) => {
   };
   
   return (
-    <S.Header onClick={() => console.log('inpsect', user)}>
+    <S.Header>
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <Col>
