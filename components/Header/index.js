@@ -12,14 +12,6 @@ const Header = ({user, logout}) => {
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
-  const [session, setSession] = useState(null)
-
-  useEffect(() => {
-    if(user) setSession({user, logout})
-    return () => {
-      
-    }
-  }, [user])
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -30,8 +22,44 @@ const Header = ({user, logout}) => {
   };
 
   const handleClick = () => {
-    console.log('header', session, user, logout)
-    logout ? logout() : session?.logout()
+    logout()
+  }
+
+  const ProtectedRoutes = ({user}) => {
+    if(!user) {
+      return (
+        <S.CustomNavLinkSmall style={{ width: "180px" }} >
+          <Link passHref href={'/auth'} >
+            <a className="button-link auth">Sign in</a>
+          </Link>
+        </S.CustomNavLinkSmall>
+      )
+    }
+    return (
+      <>
+        <S.CustomNavLinkSmall>
+          <Link href={'/timeline'}><a>Timeline</a></Link>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall>
+          <Link href={'/slides'}><a>Slides</a></Link>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall>
+          <Link href={'/profile'}>
+            <a style={{textTransform: 'capitalize', display: 'flex', alignItems: 'center'}}>
+              <SvgIcon src="profile.svg" className='profile-icon' />
+              {user.email.split(/[\.|@]/)[0]}
+            </a>
+          </Link>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall style={{ width: "180px" }} >
+          <Button style={{maxWidth: '125px'}} onClick={logout}>
+            <p className="auth" >
+              Log out 
+            </p>
+          </Button>
+        </S.CustomNavLinkSmall>
+      </>
+    )
   }
 
   const MenuItem = () => {
@@ -40,38 +68,13 @@ const Header = ({user, logout}) => {
         <S.CustomNavLinkSmall>
           <Link href={'/syllabus'}><a>Syllabus</a></Link>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall>
-          <Link href={'/timeline'}><a>Timeline</a></Link>
-        </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall>
-          <Link href={'/slides'}><a>Slides</a></Link>
-        </S.CustomNavLinkSmall>
-        {user || session?.user ? 
-        <S.CustomNavLinkSmall>
-          <Link href={'/profile'}><a>My Profile</a></Link>
-        </S.CustomNavLinkSmall>
-        : null }
-        <S.CustomNavLinkSmall style={{ width: "180px" }} >
-          
-            {!(user || session?.user) ? (
-              <Link passHref href={'/auth'} >
-                <a className="button-link auth">Sign in</a>
-              </Link>
-            ) : (
-              <Button style={{maxWidth: '125px'}} onClick={handleClick}>
-                <p className="auth" >
-                  Log out 
-                </p>
-              </Button>
-            )}
-          
-        </S.CustomNavLinkSmall>
+        <ProtectedRoutes user={user} />
       </Fragment>
     );
   };
   
   return (
-    <S.Header onClick={() => console.log('inpsect', user, session?.user)}>
+    <S.Header onClick={() => console.log('inpsect', user)}>
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <Col>

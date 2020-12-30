@@ -29,11 +29,7 @@ const Footer = () => {
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>Resources</S.Title>
-                <Link href={'https://freecodecamp.org'} passHref>
-                  <S.Large left="true">
-                    Free Code Camp
-                  </S.Large>
-                </Link>
+                
                 <Link href={'https://glitch.com'} passHref>
                   <S.Large left="true">
                     Glitch
@@ -52,12 +48,12 @@ const Footer = () => {
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Empty />
-                <Link href={'https://github.com/JamieVaughn/curriculum'} passHref>
+                <Link href={'https://freecodecamp.org'} passHref>
                   <S.Large left="true">
                     <S.FooterContainer>
-                      <SvgIcon src="github.svg" />
+                      <SvgIcon src="freecodecamp.svg" />
                     </S.FooterContainer>
-                    <span> Github</span>
+                    Free Code Camp
                   </S.Large>
                 </Link>
                 <Link href={'https://frontendacademy.slack.com'} passHref>
@@ -66,6 +62,14 @@ const Footer = () => {
                       <SvgIcon src="slack.svg" />
                     </S.FooterContainer>
                     Slack
+                  </S.Large>
+                </Link>
+                <Link href={'https://github.com/JamieVaughn/curriculum'} passHref>
+                  <S.Large left="true">
+                    <S.FooterContainer>
+                      <SvgIcon src="github.svg" />
+                    </S.FooterContainer>
+                    <span> Github</span>
                   </S.Large>
                 </Link>
               </Col>

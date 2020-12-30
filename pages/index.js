@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import Link from 'next/link'
-// import { Suspense } from 'react'
+import { useEffect } from 'react'
 import { useUser } from '../utils/auth/useUser'
 
 import Layout from "../components/Layout";
@@ -33,11 +33,12 @@ const fetcher = (url, token) =>
   // )}
 
 const Index = () => {
-  const { user, logout } = useUser()
+  const {user, logout} = useUser()
   // const { data, error } = useSWR(
   //   user ? ['/api/getFood', user.token] : null,
   //   fetcher
   // )
+  
 
   return (
     <div>

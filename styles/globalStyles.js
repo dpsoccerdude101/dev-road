@@ -29,8 +29,13 @@ const Styles = createGlobalStyle`
     .nav button {
         margin-top: 0;
     }
+    .profile-icon {
+        width: 1.5rem;
+        margin-right: 3px;
+    }
     a:hover {
         color: #000;
+        fill: rgb(255,130,92);
     }
 
     h1,
@@ -62,7 +67,6 @@ const Styles = createGlobalStyle`
         text-decoration: none;
         outline: none;
         color: #2E186A;
-
         :hover {
             color: rgb(255, 130, 92);
         }

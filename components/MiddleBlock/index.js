@@ -7,7 +7,6 @@ import Button from "../common/Button";
 import * as S from "./styles";
 
 const MiddleBlock = ({ last, id, title, content, button, srcOne, srcTwo }) => {
-  console.log('middel', srcOne, srcTwo)
   return (
     <S.MiddleBlock last={last} id={id}>
       <Row type="flex" justify="center" align="middle">
