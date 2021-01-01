@@ -39,7 +39,7 @@ const Index = () => {
       <Layout>
         <Container>
           <ScrollToTop />
-          <h1 style={{textAlign: 'center'}}>MCC Course Portal</h1>
+          <h1 style={{textAlign: 'center'}}>MCC Front End Course Portal</h1>
           <ContentBlock
             type="right"
             first="true"

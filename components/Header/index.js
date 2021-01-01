@@ -30,7 +30,7 @@ const Header = ({user, logout}) => {
     if(!user) {
       return (
         <S.CustomNavLinkSmall style={{ width: "180px" }} >
-          <Link passHref href={'/auth'} >
+          <Link passHref href={'/auth'} passHref>
             <a className="button-link auth">Sign in</a>
           </Link>
         </S.CustomNavLinkSmall>
@@ -39,13 +39,13 @@ const Header = ({user, logout}) => {
     return (
       <>
         <S.CustomNavLinkSmall>
-          <Link href={'/timeline'}><a>Timeline</a></Link>
+          <Link href={'/timeline'} passHref><a>Timeline</a></Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link href={'/slides'}><a>Slides</a></Link>
+          <Link href={'/slides'} passHref><a>Slides</a></Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link href={'/profile'}>
+          <Link href={'/profile'} passHref>
             <a style={{textTransform: 'capitalize', display: 'flex', alignItems: 'center'}}>
               <SvgIcon src="profile.svg" className='profile-icon' />
               {user.email.split(/[\.|@]/)[0]}
@@ -67,7 +67,7 @@ const Header = ({user, logout}) => {
     return (
       <Fragment>
         <S.CustomNavLinkSmall>
-          <Link href={'/syllabus'}><a>Syllabus</a></Link>
+          <Link href={'/syllabus'} passHref><a>Syllabus</a></Link>
         </S.CustomNavLinkSmall>
         <ProtectedRoutes user={user} logout={logout}/>
       </Fragment>

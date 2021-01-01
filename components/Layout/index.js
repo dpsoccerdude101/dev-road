@@ -21,6 +21,8 @@ export default function Layout({ children }) {
         <link rel="apple-touch-icon" href="/logo192.png" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#fff" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;700&display=swap" rel="stylesheet" />
       </Head>
       <Styles />
       <nav className='nav'>

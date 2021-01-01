@@ -20,6 +20,9 @@ const Grid = styled.div`
   justify-items: start;
   align-items: start;
   align-content: start;
+  @media(max-width: 768px) {
+    display: block;
+  }
 `
 const Title = styled.h1`
   text-align: center;
@@ -27,6 +30,16 @@ const Title = styled.h1`
 const Padding = styled.div`
   padding: 1rem;
 `
+
+const pickColor = name => {
+  if(typeof String(name) !== 'string') return '#777'
+  let hex = String(name).match(/[0-9|a-f]/g) || []
+  let len = hex.length 
+  if(len > 3) hex = hex.concat(['7','7']).join('').slice(0,6)
+  if(len === 3) hex = hex.join('')
+  if(len < 3) hex = hex.concat(['','','','']).join('7').slice(0,3)
+  return '#' + hex
+ }
 
 const Profile = (props) => {
     const {user, logout} = useUser()
@@ -43,9 +56,9 @@ const Profile = (props) => {
             <Grid>
                 <img 
                 className='pic'
-                style={{borderRadius: '100%', background: 'steelblue', padding: '1rem'}}
+                style={{borderRadius: '100%', background: pickColor(nickname), padding: '1rem'}}
                 height='250px' 
-                src={user.providerData[0].photoUrl || `https://avatars.dicebear.com/api/bottts/${nickname}svg`} 
+                src={user.providerData[0].photoUrl || `https://avatars.dicebear.com/api/bottts/${nickname}.svg`} 
                   />
                 <div className='email' data-id={user.id}>
                   <strong style={{fontSize: '1.25rem'}}>{user.email}</strong> <span>{user.emailVerified ? '(verfied)' : '(unverified)'}</span>
@@ -59,8 +72,8 @@ const Profile = (props) => {
             </Grid>
             <Padding>
               <Info 
-                title={'Provide Some Additional Info'} 
-                content={'Feel free to add you name and LinkedIn Account URL to your profile! Also Tell us about some of you hobbies and interests, so class project topics can be personalized for you!'} />
+                title={'Additional Info'} 
+                content={'Feel free to add your name and LinkedIn Account URL to your profile! Also tell us about some of your hobbies and interests, so class project topics can be personalized for you!'} />
             </Padding>
             </Layout>
         </div>
