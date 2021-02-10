@@ -1,8 +1,9 @@
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 import styled from "styled-components";
 import {Button} from 'antd'
-import Info from "../components/InfoForm";
-import { useUser } from '../utils/auth/useUser'
+import Info from "../../components/InfoForm";
+import { useUser } from '../../utils/auth/useUser'
+import styles from './profile.module.css'
 
 const Grid = styled.div`
   max-width: 70vw;
@@ -55,20 +56,20 @@ const Profile = (props) => {
             <Button style={{margin: '0 auto', display: 'block'}} onClick={() => logout()}>Not you? Click here</Button>
             <Grid>
                 <img 
-                className='pic'
+                className={styles.pic}
                 style={{borderRadius: '100%', background: pickColor(nickname), padding: '1rem'}}
-                height='250px' 
+                height='250px' width='250px'
                 src={user.providerData[0].photoUrl || `https://avatars.dicebear.com/api/bottts/${nickname}.svg`} 
                   />
-                <div className='email' data-id={user.id}>
+                <div className={styles.email} data-id={user.id}>
                   <strong style={{fontSize: '1.25rem'}}>{user.email}</strong> <span>{user.emailVerified ? '(verfied)' : '(unverified)'}</span>
                 </div>
                 <div style={{textTransform: 'capitalize'}}>
                   {user.providerData[0].displayName ? 'Name: '+user.providerData[0].displayName : 'Handle: '+name}
                 </div>
-                <div className='join'>Joined: {user.metadata.creationTime}</div>
-                <div className='login'>Logged in at: {user.metadata.lastSignInTime}</div>
-                <div className='phone'>Phone: {user.providerData[0].phoneNumber || 'not provided'}</div>
+                <div className={styles.join}>Joined: {user.metadata.creationTime}</div>
+                <div className={styles.login}>Logged in at: {user.metadata.lastSignInTime}</div>
+                <div className={styles.phone}>Phone: {user.providerData[0].phoneNumber || 'not provided'}</div>
             </Grid>
             <Padding>
               <Info 

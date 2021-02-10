@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState, Fragment, useContext } from "react";
 import Link from 'next/link'
 import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
@@ -7,6 +7,7 @@ import SvgIcon from "../common/SvgIcon";
 import Button from "../common/Button";
 
 import * as S from "./styles";
+
 
 const Header = ({user, logout}) => {
   const [isNavVisible] = useState(false);
@@ -20,7 +21,7 @@ const Header = ({user, logout}) => {
   const onClose = () => {
     setVisibility(!visible);
   };
-
+  
   // const handleClick = () => {
   //   console.log('logging out ' +  user.email)
   //   logout()
@@ -40,6 +41,9 @@ const Header = ({user, logout}) => {
       <>
         <S.CustomNavLinkSmall>
           <Link href={'/timeline'} passHref><a>Timeline</a></Link>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall>
+          <Link href={'/calendar'} passHref><a>Calendar</a></Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
           <Link href={'/slides'} passHref><a>Slides</a></Link>

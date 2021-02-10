@@ -32,10 +32,10 @@ const Info = ({id, title, content}) => {
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  value={values.name || ""}
+                  value={values.firstname || ""}
                   onChange={handleChange}
                 />
-                {errors.name ? (
+                {errors.firstname ? (
                   <Zoom cascade>
                     <S.Span>First Name is required</S.Span>
                   </Zoom>
@@ -48,10 +48,10 @@ const Info = ({id, title, content}) => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  value={values.email || ""}
+                  value={values.lastname || ""}
                   onChange={handleChange}
                 />
-                {errors.email ? (
+                {errors.lastname ? (
                   <Zoom cascade>
                     <S.Span>Last Name is required</S.Span>
                   </Zoom>
@@ -64,10 +64,10 @@ const Info = ({id, title, content}) => {
                   type="text"
                   name="linkedin"
                   placeholder="LinkedIn Profile URL"
-                  value={values.email || ""}
+                  value={values.linkedin || ""}
                   onChange={handleChange}
                 />
-                {errors.email ? (
+                {errors.linkedin ? (
                   <Zoom cascade>
                     <S.Span>LinkedIn Profile URL is required</S.Span>
                   </Zoom>
@@ -76,13 +76,29 @@ const Info = ({id, title, content}) => {
                 )}{" "}
               </Col>
               <Col lg={24} md={24} sm={24} xs={24}>
-                <TextArea
-                  placeholder="Your Hobbies & Interests"
-                  value={values.message || ""}
-                  name="message"
+                <Input
+                  type="text"
+                  name="fcc"
+                  placeholder="Freecodecamp Profile URL"
+                  value={values.fcc || ""}
                   onChange={handleChange}
                 />
-                {errors.message ? (
+                {errors.fcc ? (
+                  <Zoom cascade>
+                    <S.Span>Freecodecamp Profile URL is required</S.Span>
+                  </Zoom>
+                ) : (
+                  <S.Span />
+                )}{" "}
+              </Col>
+              <Col lg={24} md={24} sm={24} xs={24}>
+                <TextArea
+                  placeholder="Your Hobbies & Interests"
+                  value={values.interests || ""}
+                  name="interests"
+                  onChange={handleChange}
+                />
+                {errors.interests ? (
                   <Zoom cascade>
                     <S.Span>Hobbies & Interests are required</S.Span>
                   </Zoom>

@@ -5,6 +5,15 @@ import "react-vertical-timeline-component/style.min.css"
 
 
 const Styles = createGlobalStyle`
+  :root {
+    --grey-100: #e4e9f0;
+    --grey-200: #cfd7e3;
+    --grey-300: #b5c0cd;
+    --grey-800: #3e4e63;
+    --grid-gap: 1px;
+    --day-label-size: 20px;
+    --first-day: 3  /* value is which day of the week the first day falls on */
+  }
 
     ${antd}
 
@@ -163,41 +172,18 @@ const Styles = createGlobalStyle`
           flex-direction: column;
         }
     }
-    .pic {grid-area: pic}
-    .name { grid-area: name }
-    .email { grid-area: email }
-    .join { grid-area: join}
-    .login { grid-area: login }
-    .phone{ grid-area: phone }
-
-    /* body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  } */
-  
+    
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
-  body {
-    /* background: #3da3d5; */
-    /* font-size: 16px; */
-    /* color: rgb(53, 53, 53); */
-  }
-
-  
-  h3 {
-    padding-top: 0.25em;
-  }
-  
   .vertical-timeline-element-content {
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
       0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
     padding: 2em 3em !important;
+  }
+  .vertical-timeline::before {
+      background: #2E186A;
   }
   .vertical-timeline-element-icon svg {
     width: 24px;
@@ -209,40 +195,6 @@ const Styles = createGlobalStyle`
       justify-content: center;
       align-items: center;
   }
-  .vertical-timeline::before {
-      background: #2E186A;
-  }
-  .date {
-    color: rgb(201, 251, 255);
-  }
-  
-  #description {
-    margin: 1.5em 0 2em 0;
-  }
-  
-  .button {
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    color: white;
-  }
-  
-  .workButton {
-    background-color: #06d6a0;
-  }
-  
-  .workButton:hover {
-    background-color: #0ac593;
-  }
-  
-  .schoolButton {
-    background-color: #f9c74f;
-  }
-  
-  .schoolButton:hover {
-    background-color: #f3bc3c;
-  }
-  
   @media only screen and (max-width: 1700px) {
     .vertical-timeline-element-date {
       display: block !important;
@@ -251,6 +203,7 @@ const Styles = createGlobalStyle`
       margin-top: 1.5em;
     }
   }
+  
 `;
 
 export default Styles;

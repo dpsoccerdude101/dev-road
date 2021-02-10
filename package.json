@@ -4,10 +4,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "antd": "^4.4.1",
+    "dayjs": "^1.10.4",
     "firebase": "^7.15.5",
     "firebase-admin": "^8.12.1",
     "js-cookie": "2.2.1",

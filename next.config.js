@@ -12,6 +12,16 @@ module.exports = (phase, {defaultConfig}) => {
         // env: {
         //     apiKey: 'keyValue'
         // },
-        pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx', '^(?!test).*$']
+        pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx', '^(?!test).*$'],
+        webpack: (config, {dev, isServer}) => {
+            if(!dev && !isServer) {
+                Object.assign(config.resolve.alias, {
+                    react: 'preact/compat',
+                    'react-dom/test-utils': 'preact/test-utils',
+                    'react-dom': 'preact/compat'
+                })
+            }
+            return config
+        }
     }
 }

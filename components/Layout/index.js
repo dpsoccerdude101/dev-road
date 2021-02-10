@@ -9,9 +9,9 @@ import Footer from "../Footer";
 export default function Layout({ children }) {
   const {user, logout} = useUser()
 
-  useEffect(() => {
-    console.log('layout', user)
-  }, [user])
+  // useEffect(() => {
+  //   console.log('layout', user)
+  // }, [user])
   return (
     <div className="root">
       <Head>

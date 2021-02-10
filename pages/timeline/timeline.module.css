@@ -1,0 +1,38 @@
+
+  .vertical-timeline-element-title {
+    padding-top: 0.25em;
+  }
+  
+  .date {
+    color: rgb(201, 251, 255);
+  }
+  
+  .description {
+    margin: 1.5em 0 2em 0;
+  }
+  
+  .button {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .workButton {
+    background-color: #06d6a0;
+  }
+  
+  .schoolButton {
+    background-color: #f9c74f;
+  }
+
+  .schoolButton:hover {
+    background-color: #f3bc3c;
+  }
+  .workButton:hover {
+    background-color: #0ac593;
+  }
+  
+  
+  
+  
