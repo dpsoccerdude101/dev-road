@@ -45,6 +45,11 @@ const Footer = () => {
                     Git SCM
                   </S.Large>
                 </Link>
+                <Link href={'/career'} passHref>
+                  <S.Large left="true">
+                    Career Links
+                  </S.Large>
+                </Link>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Empty />
