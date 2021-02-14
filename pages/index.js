@@ -46,7 +46,7 @@ const Index = () => {
             title={Introduction.title}
             content={Introduction.text}
             button={Introduction.button}
-            icon="developer.svg"
+            icon="waving.svg"
           />
           <MiddleBlock
             title={FirstBlock.title}
@@ -71,7 +71,7 @@ const Index = () => {
             type="left"
             title={FourthBlock.title}
             content={FourthBlock.text}
-            icon="waving.svg"
+            icon="developer.svg"
           />
         </Container>
       </Layout>
