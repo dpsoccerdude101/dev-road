@@ -16,7 +16,7 @@ yarn.lock
 
 # production
 /build
-/.firebase/hosting.*
+/.firebase/
 
 # misc
 .DS_Store

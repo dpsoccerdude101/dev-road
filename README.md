@@ -23,5 +23,6 @@ Create an account to gain access to the learning resources:
 
 ```
 npm run build
+npm run export
 firebase deploy
 ```
