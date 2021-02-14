@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import styled from "styled-components";
-import {Button} from 'antd'
+import { Button } from 'antd'
 import Info from "../../components/InfoForm";
 import { useUser } from '../../utils/auth/useUser'
 import styles from './profile.module.css'

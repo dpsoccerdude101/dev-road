@@ -17,3 +17,11 @@ Create an account to gain access to the learning resources:
 * Coding Problem Solutions
 * Recommended Job Boards
 * External Course Videos
+
+
+#### Deploying
+
+```
+npm run build
+firebase deploy
+```

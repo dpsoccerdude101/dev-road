@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Table, Tag, Space } from 'antd';
+import { Table, Tag } from 'antd';
 import Layout from '../../components/Layout';
 import styled from "styled-components";
 import ContentBlock from "../../components/ContentBlock";
