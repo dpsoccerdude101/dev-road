@@ -5,11 +5,6 @@ export const Header = styled.header`
   padding: 1rem 0.5rem;
 `;
 
-// export const LogoContainer = styled(Link)`
-export const LogoContainer = styled.a`
-  display: flex;
-`;
-
 export const Container = styled.div`
   position: relative;
   width: 100%;
@@ -37,6 +32,19 @@ export const CustomNavLink = styled.div`
   }
 `;
 
+export const LogoWrap = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: start;
+  padding: 2px; 
+  font-size: 16px;
+  color: #ff825c;
+  font-weight: bold;
+  span {
+    padding-left: 4px;
+  }
+`
 export const ContactWrapper = styled.div`
   cursor: pointer;
   width: ${(props) => (props.width ? "100%" : "110px")};

@@ -40,7 +40,8 @@ const Advice = (props) => {
                                 <li>Take home assignments (40-50% chance)</li>
                                 <li>Strengths - Find a github project of yours that matches their job description so you can speak about how you already have experience doing what they seek. If you don’t have a github project that matches yet, spend a week or two and make one before you apply.</li>
                                 <li>Weaknesses - Framing it as your learning goals</li>
-                                <li>Book: <a href="http://www.crackingthecodinginterview.com/">Cracking the Coding Interview</a></li>
+                                <li href="https://techdevguide.withgoogle.com/paths/interview/?programming_languages=javascript">Google Interviewing Prep</li>
+                                <li>Book Recommendation: <a href="http://www.crackingthecodinginterview.com/">Cracking the Coding Interview</a></li>
                             </ul>
                         </li>
                         <li>

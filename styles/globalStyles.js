@@ -10,6 +10,10 @@ const Styles = createGlobalStyle`
     --grey-200: #cfd7e3;
     --grey-300: #b5c0cd;
     --grey-800: #3e4e63;
+    --orange: #ff825c;
+    --tan: #feba91;
+    --navy: #2e186a;
+    --violet: #5d21d1;
     --grid-gap: 1px;
     --day-label-size: 20px;
     --first-day: 3  /* value is which day of the week the first day falls on */

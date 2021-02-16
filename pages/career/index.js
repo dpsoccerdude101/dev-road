@@ -1,5 +1,7 @@
 import Layout from '../../components/Layout';
 import styles from './career.module.scss'
+import SvgIcon from "../../components/common/SvgIcon";
+
 
 const remoteJobs = [
     {title: 'JSRemotely', url: 'https://jsremotely.com/'},
@@ -26,13 +28,7 @@ const remoteJobs = [
     {title: 'Outsourcely', url: 'https://Outsourcely.com'},
     {title: 'Let\'s Work Remotely', url: 'https://LetsWorkRemotely.com'},
     {title: 'Remote Circle', url: 'https://RemoteCircle.com'},
-    {title: 'Remote Work Hub', url: 'https://RemoteWorkHub.com'},
-    {title: 'Virtual Vocations', url: 'https://VirtualVocations.com'},
-    {title: 'Virtual Vocations', url: 'https://VirtualVocations.com'},
-    {title: 'Virtual Vocations', url: 'https://VirtualVocations.com'},
-    {title: 'Virtual Vocations', url: 'https://VirtualVocations.com'},
-    
-    
+    {title: 'Remote Work Hub', url: 'https://RemoteWorkHub.com'},    
 ]
 const freelance = [
     {title: 'MoonLight', url: 'https://www.moonlightwork.com/'},
@@ -62,35 +58,39 @@ const Jobs = (props) => {
     return (
         <div>
             <Layout>
-            <h1 className={styles.title}>Developer Career Links</h1>
-            <section className={styles.padding}>
-                <h5 className={styles.subtitle}>A Curated Catalog of Career Links & Resources</h5>
-                <ul><strong>Job Networks</strong>
-                    {
-                        jobNetworks.map(j => <li><a href={j.url}>{j.title}</a></li>)
-                    }
-                </ul>
-                <ul><strong>Freelance Jobs</strong>
-                    {
-                        freelance.map(j => <li><a href={j.url}>{j.title}</a></li>)
-                    }
-                </ul>
-                <ul><strong>Gov Jobs</strong>
-                    {
-                        govJobs.map(j => <li><a href={j.url}>{j.title}</a></li>)
-                    }
-                </ul>
-                <ul><strong>Remote Job Boards</strong>
-                    {
-                        remoteJobs.map(j => <li><a href={j.url}>{j.title}</a></li>)
-                    }
-                </ul>
-                <ul><strong>Climate Jobs</strong>
-                    {
-                        otherJobs.map(j => <li><a href={j.url}>{j.title}</a></li>)
-                    }
-                </ul>
-            </section>
+                <h1 className={styles.title}>Developer Career Links</h1>
+                <SvgIcon style={{textAlign: 'center'}} src={'coffee_break.svg'} />
+                <section className={styles.padding}>
+                    <h5 className={styles.subtitle}>A Curated Catalog of Career Links & Resources</h5>
+                    <ul><strong>Job Networks</strong>
+                        {
+                            jobNetworks.map((j, i) => <li key={i}><a href={j.url}>{j.title}</a></li>)
+                        }
+                    </ul>
+                    <ul><strong>Freelance Jobs</strong>
+                        {
+                            freelance.map((j, i) => <li key={i}><a href={j.url}>{j.title}</a></li>)
+                        }
+                    </ul>
+                    <ul><strong>Gov Jobs</strong>
+                        {
+                            govJobs.map((j, i) => <li key={i}><a href={j.url}>{j.title}</a></li>)
+                        }
+                    </ul>
+                    <ul><strong>Remote Job Boards</strong>
+                        {
+                            remoteJobs.map((j, i) => <li key={i}><a href={j.url}>{j.title}</a></li>)
+                        }
+                    </ul>
+                    <ul><strong>Niche Job Boards</strong>
+                        {
+                            otherJobs.map((j, i) => <li key={i}><a href={j.url}>{j.title}</a></li>)
+                        }
+                    </ul>
+                </section>
+                <section style={{textAlign: 'center'}}>
+                    <a href="/career/advice">Junior Developer Tips</a>
+                </section>
             </Layout>
         </div>
     )

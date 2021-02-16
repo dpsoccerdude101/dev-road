@@ -28,10 +28,9 @@ const Timeline = (props) => {
                       element.buttonText !== undefined &&
                       element.buttonText !== null &&
                       element.buttonText !== "";
-          
                     return (
                       <VerticalTimelineElement
-                        key={element.key}
+                        key={element.id}
                         date={element.date}
                         dateClassName={styles.date}
                         iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
@@ -41,7 +40,7 @@ const Timeline = (props) => {
                           {element.title}
                         </h3>
                         <h5 className={styles.verticalTimelineElementSubtitle}>
-                          {element.location}
+                          {element.time}
                         </h5>
                         <p id="description"
                         className={styles.description}

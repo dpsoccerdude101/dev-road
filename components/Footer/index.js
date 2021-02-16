@@ -50,6 +50,11 @@ const Footer = () => {
                     Career Links
                   </S.Large>
                 </Link>
+                <Link href={'/faq'} passHref>
+                  <S.Large left="true">
+                    FAQ
+                  </S.Large>
+                </Link>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Empty />

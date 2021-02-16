@@ -47,12 +47,10 @@ const useUser = () => {
       })
 
     const userFromCookie = getUserFromCookie()
+    setUser(userFromCookie)
     if (!userFromCookie) {
-      // console.log('router', router)
-      router.push(router.pathname === '/syllabus' ? '/syllabus' : '/')
       return
     }
-    setUser(userFromCookie)
 
     return () => {
       cancelAuthListener()

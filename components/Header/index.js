@@ -8,7 +8,6 @@ import Button from "../common/Button";
 
 import * as S from "./styles";
 
-
 const Header = ({user, logout}) => {
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
@@ -82,11 +81,13 @@ const Header = ({user, logout}) => {
     <S.Header>
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
-          <Col>
+          <Col style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}}>
             <Link href={'/'}>
-              <S.LogoContainer >
-                <SvgIcon src="logo.svg" />
-              </S.LogoContainer>
+              <S.LogoWrap>
+                <SvgIcon style={{width: '50px', gridRow: '1 / 3'}} src="mountain-road.svg" />
+                <span>Dev</span>
+                <span>Road</span>
+              </S.LogoWrap>
             </Link>
           </Col>
           <S.NotHidden>

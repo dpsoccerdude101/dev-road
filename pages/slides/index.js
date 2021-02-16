@@ -33,7 +33,7 @@ const Slides = (props) => {
                 <h5 className={styles.subtitle}>Section I: HTML & CSS</h5>
                 <ol>
                   {
-                    slidesI.map(s => <li><a href={s.url}>{s.title}</a></li>)
+                    slidesI.map((s, i) => <li key={i}><a href={s.url}>{s.title}</a></li>)
                   }
                 </ol>
             </section>
@@ -41,7 +41,7 @@ const Slides = (props) => {
                 <h5 className={styles.subtitle}>Section II: Javascript</h5>
                 <ol>
                   {
-                    slidesII.map(s => <li><a href={s.url}>{s.title}</a></li>)
+                    slidesII.map((s, i) => <li key={i}><a href={s.url}>{s.title}</a></li>)
                   }
                 </ol>
             </section>
@@ -49,7 +49,7 @@ const Slides = (props) => {
                 <h5 className={styles.subtitle}>Section III: React</h5>
                 <ol>
                   {
-                    slidesIII.map(s => <li><a href={s.url}>{s.title}</a></li>)
+                    slidesIII.map((s, i) => <li key={i}><a href={s.url}>{s.title}</a></li>)
                   }
                 </ol>
             </section>

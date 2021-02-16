@@ -96,7 +96,6 @@ const Syllabus = () => {
           <ContentBlock
             type="left"
             title={"Classroom Segments"}
-            // content={"Classes are held online via Zoom Meet Teleconferencing"}
             section={sections}
             dense={true}
             icon={false}

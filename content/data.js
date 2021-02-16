@@ -2,7 +2,7 @@ let data = [
     {
       id: 1,
       title: "HTML",
-      location: "12 hours",
+      time: "12 hours",
       description:
         "Learn Semantic HTML5 syntax and create an HTML resume. Learn about web forms and create a contact form.",
       buttonText: "Homework",
@@ -12,7 +12,7 @@ let data = [
     {
       id: 2,
       title: "Github & VS Code",
-      location: "3 hours",
+      time: "3 hours",
       description:
         "Create an account on Github to start backing up your code. Download VS Code and learn how to code locally with the power of an IDE.",
       date: "Week 2",
@@ -21,7 +21,7 @@ let data = [
     {
       id: 3,
       title: "CSS",
-      location: "12 hours",
+      time: "12 hours",
       description:
         "Learn the power of CSS to style HTML to look however you want it. Structure your content into Media Objects, and learn modern page layout techniques.",
       buttonText: "Homework",
@@ -31,7 +31,7 @@ let data = [
     {
       id: 4,
       title: "CSS Frameworks",
-      location: "3 hours",
+      time: "3 hours",
       description:
         "Learn how to leverage other CSS systems like Bootstrap to help you style your pages. Learn how to make your own CSS design system.",
       buttonText: "Homework",
@@ -41,7 +41,7 @@ let data = [
     {
       id: 5,
       title: "Mobile Responsive Design",
-      location: "6 hours",
+      time: "6 hours",
       description:
         "Learn to use CSS to make your page responsive to device viewport sizes. We'll cover Media Queries, Mobile First Design and Adaptive layout techniques.",
       buttonText: "Homework",
@@ -51,7 +51,7 @@ let data = [
     {
       id: 6,
       title: "Accessibility",
-      location: "1.5 hours",
+      time: "1.5 hours",
       description:
         "Accessibility helps those with visual impairments enjoy the web, but its more than that. Learn how and why making your HTML accessibile is important to all users.",
       buttonText: "Homework",
@@ -61,7 +61,7 @@ let data = [
     {
       id: 7,
       title: "UI & UX",
-      location: "1.5hours",
+      time: "1.5hours",
       description:
         "Learn what makes a good user interface and what makes a good user experience, and the differences between those two topics.",
       date: "Week 6",
@@ -70,7 +70,7 @@ let data = [
     {
       id: 8,
       title: "Portfolio Project",
-      location: "3 hours",
+      time: "3 hours",
       description:
         "We'll start building our own Portfolio Site and host it live on our Github account.",
       date: "Week 7",
@@ -79,7 +79,7 @@ let data = [
     {
       id: 9,
       title: "Web Browsers",
-      location: "3 hours",
+      time: "3 hours",
       description:
         "Learn about the differences between browsers, rendering engines, and tools for cross browser compatibility.",
       date: "Week 6",
@@ -88,7 +88,7 @@ let data = [
     {
       id: 10,
       title: "The DOM",
-      location: "6 hours",
+      time: "6 hours",
       description:
         "Learn about the Document Object Model and its relation to the HTML you write. We'll also learn a select few pieces of the DOM API and some basic Javascript to add some interactivity to our pages.",
       date: "Week 8",
@@ -97,7 +97,7 @@ let data = [
     {
       id: 11,
       title: "Career Skills",
-      location: "9 hours",
+      time: "9 hours",
       description:
         "We'll cover resume writing skills and job board resources and tips when applying and talking to recruiters. We'll also practice with a mock interview.",
       date: "Week 9",

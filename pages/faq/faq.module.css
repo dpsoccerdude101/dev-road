@@ -1,0 +1,15 @@
+.title {
+    text-align: center;
+}
+
+.question {
+    font-size: 1.4rem;
+    font-weight: 700;;
+}
+
+.padding {
+  max-width: 70vw;
+  min-height: 30vh;
+  padding: 1rem;
+  margin: 0 auto;
+}
