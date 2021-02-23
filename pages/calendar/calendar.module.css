@@ -25,11 +25,13 @@
     font-weight: 600;
   }
   
+  .calendar_month_header_selectors > button {
+    background: none;
+  }
   .calendar_month_header_selectors {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80px;
   }
   
   .calendar_month_header_selectors > * {
@@ -76,7 +78,7 @@
     padding: 5px;
   }
   
-  .calendar_day > span {
+  .calendar_day > time {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +98,7 @@
     background-color: var(--tan);
   }
   
-  .calendar_day_today > span {
+  .calendar_day_today > time {
     color: #fff;
     border-radius: 9999px;
     background-color: var(--grey-800);

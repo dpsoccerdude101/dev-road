@@ -71,6 +71,7 @@ const createDaysArray = (date) => {
   ]
 }
 
+  // https://www.iandevlin.com/blog/2015/07/html5/building-a-semantic-calendar-in-html5/
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const NOW = dayjs()
 const INITIAL_DAYS = createDaysArray(NOW)
@@ -91,6 +92,10 @@ const Calendar = (props) => {
       setDays(createDaysArray(selectedDate))
     }, [selectedDate])
 
+// TODO:
+// Add click to open event page for the date.
+// designs for that page could be: https://codepen.io/davidkpiano/pen/xwyVXO or https://codepen.io/peanav/pen/ulkof
+
     return (
         <Layout>
             <div className={styles.calendar_month}>
@@ -99,9 +104,9 @@ const Calendar = (props) => {
                         {selectedDate.format("MMMM YYYY")}
                     </div>
                     <section className={styles.calendar_month_header_selectors}>
-                        <span onClick={() => panMonth('subtract')}> ← </span>
-                        <span onClick={() => panMonth()}>Today</span>
-                        <span onClick={() => panMonth('add')}> → </span>
+                        <button onClick={() => panMonth('subtract')}> ← </button>
+                        <button onClick={() => panMonth()}>Today</button>
+                        <button onClick={() => panMonth('add')}> → </button>
                     </section>
                 </section>
 
@@ -118,7 +123,7 @@ const Calendar = (props) => {
                       !d.isCurrentMonth && styles.calendar_day_not_current,
                       d.date === NOW.format("YYYY-MM-DD") && styles.calendar_day_today
                     ].join(' ')}>
-                      <span>{d.dayOfMonth}</span>
+                      <time datetime={d.date}>{d.dayOfMonth}</time> 
                     </li>
                   ))}
                 </ol>
@@ -126,5 +131,5 @@ const Calendar = (props) => {
         </Layout>
     )
   }
-  
-export default Calendar
+
+  export default Calendar

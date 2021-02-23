@@ -36,8 +36,7 @@ const freelance = [
     {title: 'GumRoad', url: 'https://www.gumroad.com/'},
     {title: 'TopTal', url: 'https://www.toptal.com/'},
     {title: 'Topcoder', url: 'https://www.topcoder.com/community/gigstart'},
-    
-    
+    {title: 'Tecla', url: 'https://www.tecla.io/'},
 ]
 const govJobs = [
     {title: 'US Digital Service', url: 'https://www.usds.gov/apply'},
@@ -49,10 +48,12 @@ const jobNetworks = [
     {title: 'Indeed', url: 'https://www.indeed.com/'},
 ]
 const otherJobs = [
-    {title: 'ClimateBase', url: 'https://climatebase.org/'},
+    {title: 'Flex Jobs', url: 'https://www.flexjobs.com/jobs/web-design'},
     {title: 'Authentic Jobs', url: 'https://AuthenticJobs.com'},
     {title: 'Dynamite Jobs', url: 'https://DynamiteJobs.co'},
+    {title: 'ClimateBase', url: 'https://climatebase.org/'},
 ]
+    
 const Jobs = (props) => {
 
     return (

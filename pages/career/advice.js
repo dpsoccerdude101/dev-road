@@ -58,6 +58,40 @@ const Advice = (props) => {
                                 <li>Entry level vs Mid vs Senior</li>
                                 <li>Know your worth</li>
                                 <li>Negotiate for value not just compensation</li>
+                                <li>
+                                    <details>
+                                        <summary>What can you negotiate for?</summary>
+                                        <ul>
+                                            <li>Base Salary</li>
+                                            <li>Minimum Raises & Raise Interval</li>
+                                            <li>Performance Review Frequency</li>
+                                            <li>Healthcare Benefits & Premium discounts</li>
+                                            <li>Vacation</li>
+                                            <li>Training</li>
+                                            <li>Education & Professional Development & Conferences</li>
+                                            <li>Tuition Assistance</li>
+                                            <li>Annual Bonuses</li>
+                                            <li>Incentive Pay & Commision</li>
+                                            <li>Health Club Memberships</li>
+                                            <li>Home Office & Internet Stipend</li>
+                                            <li>Car</li>
+                                            <li>Parking</li>
+                                            <li>Association Dues</li>
+                                            <li>Signing Bonuses</li>
+                                            <li>Profit Sharing</li>
+                                            <li>Stock Options & Equity</li>
+                                            <li>Insurance</li>
+                                            <li>Pension</li>
+                                            <li>Overtime Rate</li>
+                                            <li>Relocation Expenses</li>
+                                            <li>Expense Account & Company Card</li>
+                                            <li>Travel & Travel Rewards</li>
+                                            <li>Company Mobile Phone & Laptop</li>
+                                            <li>Remote Work, Telecommuting, Flex Time</li>
+                                            <li>Leaves of Absence or Sabbatical</li>
+                                        </ul>
+                                    </details>
+                                </li>
                             </ul>
                         </li>
                         <li>

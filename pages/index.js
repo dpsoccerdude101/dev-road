@@ -39,7 +39,10 @@ const Index = () => {
       <Layout>
         <Container>
           <ScrollToTop />
-          <h1 style={{textAlign: 'center'}}>MCC Front End Course Portal</h1>
+          <h1 style={{textAlign: 'center'}}>
+            MCC Web Developer Course Portal 
+            <a href='https://campusce.monroecc.edu/monroecc/course/course.aspx?C=828' target="_blank" rel="noreferrer"> 🔗</a>
+          </h1>
           <ContentBlock
             type="right"
             first="true"

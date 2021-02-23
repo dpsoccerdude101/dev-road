@@ -101,7 +101,7 @@ const Syllabus = () => {
             icon={false}
             />
         </div>
-        <Title>Course Syllabus</Title>
+        <Title>Course Syllabus <a href='https://campusce.monroecc.edu/monroecc/course/course.aspx?C=828' target="_blank" rel="noreferrer"> 🔗</a></Title>
         <Padding>
           <Table 
             onChange={(page, sort, ev, filter) => setTotal(sum(filter.currentDataSource))}
