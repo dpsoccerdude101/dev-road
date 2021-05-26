@@ -27,8 +27,9 @@ const Info = ({id, title, content}) => {
           </Col>
           <Col lg={12} md={12} sm={24} xs={24}>
             <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col lg={24} md={24} sm={24} xs={24}>
+              <Col style={{display: 'flex', alignItems: 'center', maxWidth: '100%'}} lg={12} md={12} sm={24} xs={24}>
                 <Input
+                  inline={true}
                   type="text"
                   name="firstName"
                   placeholder="First Name"
@@ -42,9 +43,8 @@ const Info = ({id, title, content}) => {
                 ) : (
                   <S.Span />
                 )}{" "}
-              </Col>
-              <Col lg={24} md={24} sm={24} xs={24}>
                 <Input
+                  inline={true}
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
@@ -86,6 +86,22 @@ const Info = ({id, title, content}) => {
                 {errors.fcc ? (
                   <Zoom cascade>
                     <S.Span>Freecodecamp Profile URL is required</S.Span>
+                  </Zoom>
+                ) : (
+                  <S.Span />
+                )}{" "}
+              </Col>
+              <Col lg={24} md={24} sm={24} xs={24}>
+                <Input
+                  type="text"
+                  name="discord"
+                  placeholder="Discord Username"
+                  value={values.discord || ""}
+                  onChange={handleChange}
+                />
+                {errors.fcc ? (
+                  <Zoom cascade>
+                    <S.Span>Discord Username is required</S.Span>
                   </Zoom>
                 ) : (
                   <S.Span />

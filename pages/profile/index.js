@@ -74,7 +74,11 @@ const Profile = (props) => {
             <Padding>
               <Info 
                 title={'Additional Info'} 
-                content={'Feel free to add your name and LinkedIn Account URL to your profile! Also tell us about some of your hobbies and interests, so class project topics can be personalized for you!'} />
+                content={'Feel free to add your name and LinkedIn Account URL to your profile! Also tell us about some of your hobbies and interests, so class project topics can be personalized for you!'} 
+              />
+            </Padding>
+            <Padding style={{margin: '0 auto', width: '90%'}}>
+              <iframe src="https://discord.com/widget?id=831668785274421300&theme=dark" width="100%" height="500"  allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </Padding>
             </Layout>
         </div>
