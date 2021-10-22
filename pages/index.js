@@ -3,7 +3,7 @@
 // import { useEffect } from 'react'
 
 import Layout from "../components/Layout";
-
+import SvgIcon from '../components/common/SvgIcon'
 import ContentBlock from "../components/ContentBlock";
 import MiddleBlock from "../components/MiddleBlock";
 import Container from "../components/common/Container";
@@ -39,10 +39,14 @@ const Index = () => {
       <Layout>
         <Container>
           <ScrollToTop />
+          <a href='https://campusce.monroecc.edu/monroecc/course/course.aspx?C=828' target="_blank" rel="noreferrer">
           <h1 style={{textAlign: 'center'}}>
-            MCC Web Developer Course Portal 
-            <a href='https://campusce.monroecc.edu/monroecc/course/course.aspx?C=828' target="_blank" rel="noreferrer"> 🔗</a>
+            <span style={{position: 'relative'}}>
+              MCC Web Developer Course Portal
+              <SvgIcon src="external_link.svg" style={{position: 'absolute', left: '101%', top: '0'}} />
+            </span>
           </h1>
+            </a>
           <ContentBlock
             type="right"
             first="true"
@@ -54,7 +58,6 @@ const Index = () => {
           <MiddleBlock
             title={FirstBlock.title}
             content={FirstBlock.text}
-            button={FirstBlock.button}
           />
           <ContentBlock
             type="left"

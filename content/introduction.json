@@ -9,7 +9,8 @@
     {
       "title": "See Syllabus",
       "href": "/syllabus",
-      "color": "#fff"
+      "color": "#fff",
+      "class": "ghost"
     }
   ]
 }

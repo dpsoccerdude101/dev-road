@@ -24,9 +24,30 @@ export const ContentWrapper = styled.div`
     margin: 2rem 0;
   }
 `;
+export const CustomNavLink = styled.div`
+  width: 203px;
+  display: inline-block;
 
-export const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 400px;
+  @media only screen and (max-width: 411px) {
+    width: 150px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    width: 118px;
+  }
+`;
+export const NavLink = styled.div`
+  display: inline-block;
+  text-align: center;
+  `;
+export const CustomNavLinkSmall = styled(NavLink)`
+  font-size: 1rem;
+  color: #000000;
+  transition: color 0.2s ease-in;
+  margin: 0.25rem 0.75rem;
+  user-select: none;
+
+  @media only screen and (max-width: 768px) {
+    margin: 1.25rem 0.75rem;
+  }
 `;

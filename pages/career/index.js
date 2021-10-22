@@ -48,7 +48,7 @@ const jobNetworks = [
     {title: 'Indeed', url: 'https://www.indeed.com/'},
 ]
 const otherJobs = [
-    {title: 'Levels.fyi Internships', url: 'https://www.levels.fyi/internships/'}
+    {title: 'Levels.fyi Internships', url: 'https://www.levels.fyi/internships/'},
     {title: 'Flex Jobs', url: 'https://www.flexjobs.com/jobs/web-design'},
     {title: 'Authentic Jobs', url: 'https://AuthenticJobs.com'},
     {title: 'Dynamite Jobs', url: 'https://DynamiteJobs.co'},

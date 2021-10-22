@@ -160,6 +160,14 @@ const Styles = createGlobalStyle`
         margin-top: 0.625rem;
         max-width: 180px;
     }
+    .ghost {
+        color: var(--navy);
+        border: 1px solid var(--navy);
+        background: #fff;
+    }
+    .cta-btn {
+        min-width: 132px;
+    }
     .figures {
         display: flex;
         justify-content: center;

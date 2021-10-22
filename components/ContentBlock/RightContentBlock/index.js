@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
 import { Slide } from "react-reveal";
+import Link from 'next/link'
 
 import SvgIcon from "../../common/SvgIcon";
 import Button from "../../common/Button";
@@ -17,17 +18,19 @@ const RightBlock = ({ last, first, title, content, button, icon }) => {
             <S.ContentWrapper>
               <S.Title>{title}</S.Title>
               <S.Content>{content}</S.Content>
-              <S.ButtonWrapper>
+              <div style={{display: 'flex', justifyContent: 'space-around', maxWidth: '400px'}}>
                 {button &&
                   typeof button === "object" &&
                   button.map((item, id) => {
                     return (
-                      <Button key={id} color={item.color} width="true">
-                        <a href={item.href} className={item.href.slice(1)}>{item.title}</a>
-                      </Button>
+                      <S.CustomNavLinkSmall key={id} >
+                        <Link passHref href={item.href} passHref >
+                          <a className={`button-link auth cta-btn ${item.class}`}>{item.title}</a>
+                        </Link>
+                      </S.CustomNavLinkSmall>
                     );
                   })}
-              </S.ButtonWrapper>
+              </div>
             </S.ContentWrapper>
           </Slide>
         </Col>
