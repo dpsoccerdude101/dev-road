@@ -1,7 +1,6 @@
 {
-    "title": "Learn HTML, CSS, Javascript & React",
-    "text": "Prepare yourself for one of the fastest growing industries out there! You'll be equipped with all the tools and best practices you'll need to succeed.",
-    "srcOne": "html_js_css_logo.png",
-    "srcTwo": "react_icon.png"
-  }
-  
+  "title": "Learn HTML, CSS, Javascript & React",
+  "text": "Prepare yourself for one of the fastest-growing industries out there! We will equip you with all the tools and best practices you'll need to succeed.",
+  "srcOne": "html_js_css_logo.png",
+  "srcTwo": "react_icon.png"
+}
