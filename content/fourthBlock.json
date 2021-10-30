@@ -1,4 +1,4 @@
 {
   "title": "Learn Application Architecture with React",
-  "text": "As these web applications scale up in size, the best developers know that code organization and architecture is paramount. With frameworks like React.js, developer teams can break up their application into small components to easily manage complexity. You'll learn the industry best practices that guide writing and organizing components in React."
+  "text": "As these web applications scale up, the best developers know that code organization and architecture are paramount. With frameworks like React.js, developer teams can break up their application into small components to easily manage complexity. You'll learn the industry best practices that guide writing and organizing components in React."
 }
