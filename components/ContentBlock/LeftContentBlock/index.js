@@ -29,7 +29,10 @@ const LeftContentBlock = ({ icon, title, content, section, dense}) => {
                         <Col key={id} lg={12} md={12} sm={12} xs={12}>
                           {dense ? null : <SvgIcon src={item.icon} />}
                           <S.MinTitle style={{display: 'flex', alignItems: 'center'}}>{dense && <SvgIcon src={item.icon} style={{marginRight: '4px'}}/>} {item.title}</S.MinTitle>
-                          <S.MinPara>{item.content}</S.MinPara>
+                          {Array.isArray(item.content) ? 
+                            item.content.map(i => <S.MinPara>{i}</S.MinPara>) :
+                            <S.MinPara>{item.content}</S.MinPara>
+                          }
                         </Col>
                       );
                     })}

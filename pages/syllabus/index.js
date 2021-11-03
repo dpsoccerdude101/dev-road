@@ -89,7 +89,7 @@ const Syllabus = () => {
           <ContentBlock
             type="left"
             title={"Class Details"}
-            content={"Classes are held via Open Source Jitsi Meet Teleconferencing"}
+            content={"Classes are held via Online Video Conferencing in our Discord Server"}
             section={details}
             icon={false}
           />
@@ -101,7 +101,7 @@ const Syllabus = () => {
             icon={false}
             />
         </div>
-        <Title>Course Syllabus <a href='https://campusce.monroecc.edu/monroecc/course/course.aspx?C=828' target="_blank" rel="noreferrer"> 🔗</a></Title>
+        <Title>Course Syllabus <a href='https://campusce.monroecc.edu/monroecc/course/course.aspx?C=848' target="_blank" rel="noreferrer"> 🔗</a></Title>
         <Padding>
           <Table 
             onChange={(page, sort, ev, filter) => setTotal(sum(filter.currentDataSource))}

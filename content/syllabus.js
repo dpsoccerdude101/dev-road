@@ -40,12 +40,12 @@ export const rows = [
   export const details = [
     {
       "title": "Time:",
-      "content": "Tuesdays & Thursdays, 5:30pm - 8:30pm",
+      "content": "Mondays, Wednesdays & Thursdays, 6:30pm - 9:30pm",
       "icon": "notes.svg"
     },
     {
-      "title": "Instructor:",
-      "content": "W. Jamie Vaughn wvaughniv@monroecc.edu",
+      "title": "Instructors:",
+      "content": ["W. Jamie Vaughn", "jamie.vaughn4@gmail.com", "Dennis Pavlyuk", "dennispavlyuk@gmail.com"],
       "icon": "notes.svg"
     }
   ]

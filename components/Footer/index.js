@@ -30,9 +30,9 @@ const Footer = () => {
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>Resources</S.Title>
                 
-                <Link href={'https://glitch.com'} passHref>
+                <Link href={'https://vscode.dev'} passHref>
                   <S.Large left="true">
-                    Glitch
+                    VSCode.dev
                   </S.Large>
                 </Link>
                 <Link href={'https://code.visualstudio.com'} passHref>
@@ -66,15 +66,15 @@ const Footer = () => {
                     Free Code Camp
                   </S.Large>
                 </Link>
-                <Link href={'https://frontendacademy.slack.com'} passHref>
+                <Link href={'https://discord.gg/E4rZVQC8YQ'} passHref>
                   <S.Large left="true">
                     <S.FooterContainer>
-                      <SvgIcon src="slack.svg" />
+                      <SvgIcon src="discord.svg" />
                     </S.FooterContainer>
-                    Slack
+                    Discord
                   </S.Large>
                 </Link>
-                <Link href={'https://github.com/JamieVaughn/curriculum'} passHref>
+                <Link href={'https://github.com/JamieVaughn/code-along'} passHref>
                   <S.Large left="true">
                     <S.FooterContainer>
                       <SvgIcon src="github.svg" />
